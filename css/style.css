@@ -911,7 +911,6 @@ h1, h2, h3, h4, p {
     width: 16px;
     height: 15px;
     fill: var(--visual-text-color);
-    background-origin: border-box;
 }
 
 .checkbox-control {
