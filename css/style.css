@@ -900,6 +900,34 @@ h1, h2, h3, h4, p {
     color: rgba(117, 117, 117, 0.5);
 }
 
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-icon {
+    opacity: 0;
+    width: 16px;
+    height: 15px;
+    fill: var(--visual-text-color);
+    background-origin: border-box;
+}
+
+.checkbox-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 4px;
+}
+
+.terms-condition-check:checked + .checkbox-icon {
+    opacity: 1;
+}
+
 .terms-condition-text {
     font-size: 14px;
     line-height: 1.7;

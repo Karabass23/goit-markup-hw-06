@@ -634,12 +634,18 @@
               placeholder="Введите текст"
             ></textarea>
           </div>
-          <div>
-            <input
-              type="checkbox"
-              name="terms-condition"
-              id="terms-condition"
-            />
+          <div class="checkbox">
+            <div class="checkbox-control">
+              <input
+                class="terms-condition-check visually-hidden"
+                type="checkbox"
+                name="terms-condition"
+                id="terms-condition"
+              />
+              <svg class="checkbox-icon" aria-hidden="true">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </div>
             <label class="terms-condition-text" for="terms-condition"
               >Соглашаюсь с рассылкой и принимаю
             </label>
