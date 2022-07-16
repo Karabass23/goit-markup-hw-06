@@ -87,7 +87,7 @@
           <ul class="list">
             <li class="item">
               <div class="icon">
-                <svg class="anim" aria-hidden="true" width="70" height="70">
+                <svg class="anim" aria-hidden="true">
                   <use href="./images/symbol-defs.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -99,7 +99,7 @@
             </li>
             <li class="item">
               <div class="icon">
-                <svg class="anim" aria-hidden="true" width="70" height="70">
+                <svg class="anim" aria-hidden="true">
                   <use href="./images/symbol-defs.svg#icon-clock"></use>
                 </svg>
               </div>
@@ -111,7 +111,7 @@
             </li>
             <li class="item">
               <div class="icon">
-                <svg class="anim" aria-hidden="true" width="70" height="70">
+                <svg class="anim" aria-hidden="true">
                   <use href="./images/symbol-defs.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -123,7 +123,7 @@
             </li>
             <li class="item">
               <div class="icon">
-                <svg class="anim" aria-hidden="true" width="70" height="70">
+                <svg class="anim" aria-hidden="true">
                   <use href="./images/symbol-defs.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -539,17 +539,114 @@
             </li>
           </ul>
         </div>
+        <div>
+          <form name="subscribe-form" autocomplete="off">
+            <label class="cta-text form" for="user-email"
+              >Подпишитесь на рассылку</label
+            >
+            <input
+              class="subscribe-form-input"
+              type="email"
+              name="user-email"
+              id="user-email"
+              placeholder="E-mail"
+              required
+            />
+            <div class="subscribe-form-thumb">
+              <button class="subscribe-form-button" type="submit">
+                Подписаться
+              </button>
+              <svg class="subscribe-form-icon" aria-hidden="true">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
 
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-button" data-modal-close>
+        <button class="close-button" type="button" data-modal-close>
           <svg class="icon-close-modal" aria-label="Закрыть окно">
             <use href="./images/symbol-defs.svg#icon-close-modal"></use>
           </svg>
         </button>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form name="callback-form" autocomplete="off">
+          <div class="font-field">
+            <label class="font-field-label" for="user-name">Имя</label>
+            <div class="font-field-thumb">
+              <input
+                class="font-field-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder=" "
+                required
+              />
+              <svg class="font-field-icon" aria-hidden="true">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="font-field">
+            <label class="font-field-label" for="user-phone">Телефон</label>
+            <div class="font-field-thumb">
+              <input
+                class="font-field-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                placeholder=" "
+                required
+              />
+              <svg class="font-field-icon" aria-hidden="true">
+                <use href="./images/icons.svg#icon-phone-form"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="font-field">
+            <label class="font-field-label" for="user-mail">Почта</label>
+            <div class="font-field-thumb">
+              <input
+                class="font-field-input"
+                type="email"
+                name="user-mail"
+                id="user-mail"
+                placeholder=" "
+                required
+              />
+              <svg class="font-field-icon" aria-hidden="true">
+                <use href="./images/icons.svg#icon-mail-form"></use>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <label class="font-field-label" for="user-comment"
+              >Комментарий</label
+            >
+            <textarea
+              class="font-field-textarea"
+              id="user-comment"
+              name="user-comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="terms-condition"
+              id="terms-condition"
+            />
+            <label class="terms-condition-text" for="terms-condition"
+              >Соглашаюсь с рассылкой и принимаю
+            </label>
+            <a class="terms-condition-link" href="">Условия договора</a>
+          </div>
+          <button class="modal-form-button" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 
