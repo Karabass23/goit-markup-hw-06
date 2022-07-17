@@ -174,18 +174,11 @@ h1, h2, h3, h4, p {
     height: 4px;
     background-color: var(--visual-text-color);
     border-radius: 2px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 250ms var(--timing-function);
+    opacity: 0;
 }
 
 .site-nav .current::after {
-    transform: scaleX(1);
-}
-
-.site-nav .link:hover:after,
-.site-nav .link:focus:after {
-    transform: scaleX(1);
+    opacity: 1;
 }
 
 .auth-nav .link {
@@ -305,11 +298,11 @@ h1, h2, h3, h4, p {
 .anim {
     width: 70px;
     height: 70px;
-    animation-name: heartBeat;
+    /* animation-name: heartBeat;
     animation-duration: 1500ms;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
-
+/* 
 @keyframes heartBeat{
     0% {
         transform: scale(1);
@@ -332,7 +325,7 @@ h1, h2, h3, h4, p {
     100% {
         transform: scale(1);
     }
-}
+} */
 
 
 /* Чем мы занимаемся*/
@@ -688,6 +681,8 @@ h1, h2, h3, h4, p {
     display: block;
 }
 
+/* Форма в футере */
+
 .subscribe-form-input {
     padding: 15px 16px;
 
@@ -712,6 +707,7 @@ h1, h2, h3, h4, p {
 }
 
 .subscribe-form-button {
+    position: relative;
     padding: 10px 62px 10px 29px;
 
     width: 200px;
@@ -735,7 +731,6 @@ h1, h2, h3, h4, p {
 
 .subscribe-form-thumb {
     display: inline-block;
-    position: relative;
     margin-left: 12px;
 }
 
@@ -850,15 +845,6 @@ h1, h2, h3, h4, p {
     border: 1px solid var(--visual-text-color);
 }
 
-.font-field-input:not(:placeholder-shown),
-.font-field-textarea:not(:placeholder-shown){
-    border: 1px solid var(--visual-text-color);
-}
-
-.font-field-input:not(:placeholder-shown) +.font-field-icon {
-    fill: var(--visual-text-color);
-}
-
 .font-field-thumb {
     position: relative;
 }
@@ -900,34 +886,27 @@ h1, h2, h3, h4, p {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .checkbox-icon {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 16px;
+    height: 15px;
+}
+
+.okey {
     opacity: 0;
-    width: 16px;
-    height: 15px;
-    fill: var(--visual-text-color);
+
+    transition: opacity 250ms var(--timing-function);
 }
 
-.checkbox-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--title-text-color);
-    border-radius: 4px;
-}
-
-.terms-condition-check:checked + .checkbox-icon {
+.terms-condition-check:checked + .checkbox-icon >.okey {
     opacity: 1;
 }
 
 .terms-condition-text {
+    padding-left: 24px;
+    position: relative;
     font-size: 14px;
     line-height: 1.7;
     color: var(--primary-text-color);

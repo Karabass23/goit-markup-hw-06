@@ -555,10 +555,10 @@
             <div class="subscribe-form-thumb">
               <button class="subscribe-form-button" type="submit">
                 Подписаться
+                <svg class="subscribe-form-icon" aria-hidden="true">
+                  <use href="./images/icons.svg#icon-telegram"></use>
+                </svg>
               </button>
-              <svg class="subscribe-form-icon" aria-hidden="true">
-                <use href="./images/icons.svg#icon-telegram"></use>
-              </svg>
             </div>
           </form>
         </div>
@@ -583,7 +583,6 @@
                 type="text"
                 name="user-name"
                 id="user-name"
-                placeholder=" "
                 required
               />
               <svg class="font-field-icon" aria-hidden="true">
@@ -599,7 +598,6 @@
                 type="tel"
                 name="user-phone"
                 id="user-phone"
-                placeholder=" "
                 required
               />
               <svg class="font-field-icon" aria-hidden="true">
@@ -615,7 +613,6 @@
                 type="email"
                 name="user-mail"
                 id="user-mail"
-                placeholder=" "
                 required
               />
               <svg class="font-field-icon" aria-hidden="true">
@@ -635,19 +632,17 @@
             ></textarea>
           </div>
           <div class="checkbox">
-            <div class="checkbox-control">
+            <label class="terms-condition-text">
               <input
                 class="terms-condition-check visually-hidden"
                 type="checkbox"
                 name="terms-condition"
-                id="terms-condition"
               />
               <svg class="checkbox-icon" aria-hidden="true">
-                <use href="./images/icons.svg#icon-check"></use>
+                <use href="./images/icons.svg#icon-not-check"></use>
+                <use class="okey" href="./images/icons.svg#icon-check"></use>
               </svg>
-            </div>
-            <label class="terms-condition-text" for="terms-condition"
-              >Соглашаюсь с рассылкой и принимаю
+              Соглашаюсь с рассылкой и принимаю
             </label>
             <a class="terms-condition-link" href="">Условия договора</a>
           </div>
